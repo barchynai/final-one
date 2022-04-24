@@ -3,6 +3,8 @@ import Header from './Header'
 
 export default function Music() {
   return (
-    <div>Music</div>
+   <>
+   <Header/>
+   </>
   )
 }
