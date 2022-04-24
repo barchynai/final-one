@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import images from '../../image';
 import { Link } from 'react-router-dom'
 import {MdViewHeadline} from 'react-icons/md';
-import {MdClear} from 'react-icons/md';
+import {MdClear} from 'react-icons/md'; 
 import './Header.scss'
 
 
