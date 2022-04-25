@@ -5,8 +5,7 @@ import CustomPagination from '../pagination/CustomPagination';
 import Header from './Header';
 import '../trending/Trending.scss'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Genres from '../trending/genre/Genre';
-import useGenre from '../trending/genre/useGenre';
+
 
 const darkTheme = createTheme({
   palette: {
@@ -19,35 +18,26 @@ export default function Trending() {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
-  const [genres, setGenres] = useState([]);
-  const [selectedGenres, setSelectedGenres] = useState([]);
-  const genreforURL = useGenre(selectedGenres);
+
 
   
   const fetchTrending = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/trending/all/day?api_key=57d03091a59398ea6e390ffa9806caf6&page=${page}&with_genres=${genreforURL}`
+      `https://api.themoviedb.org/3/trending/all/day?api_key=57d03091a59398ea6e390ffa9806caf6&page=${page}`
     );
     setContent(data.results);
     setNumOfPages(data.total_pages);
   };
 
+
       useEffect(()=>{
         fetchTrending() 
         // eslint-disable-next-line
-      }, [genreforURL, page])
+      }, [ page])
   return (  
       <> 
       <Header/>
-      <span className="pageTitle-trending ">Trending Today</span>
-      <Genres
-        type="movie"
-        selectedGenres={selectedGenres}
-        setSelectedGenres={setSelectedGenres}
-        genres={genres}
-        setGenres={setGenres}
-        setPage={setPage}
-      />
+      <p className="pageTitle-trending ">Trending Today</p>
       <div className="trending">
         {
           content && content.map((c)=>(
