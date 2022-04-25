@@ -2,12 +2,15 @@
 
 .header__wrapper{
     width: 100%;
+    position:fixed ;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $color-black;
+    background: $color-black;
     padding: 0rem 2rem;
     z-index: 100;
+    margin-top: 0;
+    top: 0;
     
 }
 .header__logo{

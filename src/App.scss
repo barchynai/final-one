@@ -19,4 +19,13 @@ body {
   a {
   text-decoration: none;
 }
-
+.pageTitle {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vw;
+  padding: 4px;
+  border-radius: 50px;
+  color: white;
+}
