@@ -16,6 +16,7 @@ export default function Trending() {
 
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
+  const [numOfPages, setNumOfPages] = useState();
 
   
   const fetchTrending = async () => {
@@ -23,6 +24,7 @@ export default function Trending() {
       `https://api.themoviedb.org/3/trending/all/day?api_key=57d03091a59398ea6e390ffa9806caf6&page=${page}`
     );
     setContent(data.results);
+    setNumOfPages(data.total_pages);
   };
 
       useEffect(()=>{
@@ -48,7 +50,7 @@ export default function Trending() {
       </div>
       <ThemeProvider theme={darkTheme}>
         <div>
-         <CustomPagination setPage={setPage}/>
+         <CustomPagination setPage={setPage} numOfPages={numOfPages} />
       </div>
       </ThemeProvider>
       
