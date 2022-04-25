@@ -2,7 +2,7 @@
 
 .movie-list,
 .show-list {
-  margin: 20px 0px;
+  margin: 20px 10px;
   h2 {
     color: $color-white;
     margin-bottom: 10px;
@@ -15,4 +15,5 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 0 30px;
 }
