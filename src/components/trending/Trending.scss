@@ -1,0 +1,17 @@
+.trending {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .pageTitle {
+    text-transform: uppercase;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 4vw;
+    padding: 4px;
+    border-radius: 50px;
+    color: white;
+    margin-top: 90px;
+    z-index: 100;
+  }

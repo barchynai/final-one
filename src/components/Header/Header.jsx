@@ -14,7 +14,7 @@ export default function Header() {
         <div className='header__logo'>
             <Link to='/'><img src={images.logo} alt='netflix logo'/></Link>
         </div>
-        <Link to='/chat' className='header__links'><h3 className='p__opensans'>Chat</h3></Link>
+        <Link to='/trending' className='header__links'><h3 className='p__opensans'>Trending</h3></Link>
         <Link to='/music' className='header__links'><h3 className='p__opensans'>Music</h3></Link>
         <Link to='/games' className='header__links'><h3 className='p__opensans'>Games</h3></Link>
    
@@ -27,7 +27,7 @@ export default function Header() {
         {toggleMenu && (
           <div className="header__smallscreen_overlay flex__center slide-bottom">
             <MdClear fontSize={27} className="overlay__close" onClick={() => setToggleMenu(false)} />
-            <Link to='/chat' className='header__links-smallscreen_links' onClick={() => setToggleMenu(false)}><h3 className='p__opensans'>Chat</h3></Link>
+            <Link to='/trending' className='header__links-smallscreen_links' onClick={() => setToggleMenu(false)}><h3 className='p__opensans'>Trending</h3></Link>
             <Link to='/music' className='header__links-smallscreen_links' onClick={() => setToggleMenu(false)}><h3 className='p__opensans'>Music</h3></Link>
             <Link to='/games' className='header__links-smallscreen_links' onClick={() => setToggleMenu(false)}><h3 className='p__opensans'>Games</h3></Link>
            </div>
