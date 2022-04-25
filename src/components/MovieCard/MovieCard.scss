@@ -6,13 +6,15 @@
     flex-direction: column;
     width: 230px;
     padding: 5px;
-    margin: 10px 0 15px 0;
+    margin: 20px;
     background: url('../../assets/bgd-red.jpg');
     background-position: center;
     background-size: cover;
     border-radius: 10px;
     position: relative;
     color: rgb(137, 125, 125);
+    height: 450px;
+
 
 }
 .card-item:hover {
